@@ -377,6 +377,14 @@
 -r:"Library/Bee/artifacts/1900b0aE.dag/Unity.VSCode.Editor.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEditor.UI.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEngine.UI.ref.dll"
+"Assets/DDSystem/Demo/Scripts/TestMessage.cs"
+"Assets/DDSystem/Demo/Scripts/TestMessage_Selection.cs"
+"Assets/DDSystem/Script/Character.cs"
+"Assets/DDSystem/Script/DialogBase.cs"
+"Assets/DDSystem/Script/DialogManager.cs"
+"Assets/DDSystem/Script/EmotionDrawer.cs"
+"Assets/Scripts/FasesLiberadas.cs"
+"Assets/Scripts/GerenciadorCena.cs"
 "Assets/Scripts/PlayerController.cs"
 -langversion:9.0
 

@@ -13,26 +13,39 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cacheType: 2
-  lastUpdatedAtString: 2022-10-01T21:11:09.015-03:00
-  initializedAtString: 2022-10-01T21:11:09.006-03:00
-  localBranches:
-  - name: main
-    tracking: 
-  remoteBranches: []
-  remotes: []
+  lastUpdatedAtString: 2022-10-02T19:39:05.422-03:00
+  initializedAtString: 2022-10-02T19:08:08.716-03:00
+  localBranches: []
+  remoteBranches:
+  - name: origin/HEAD
+    tracking: '[None]'
+  remotes:
+  - name: origin
+    url: https://github.com/gui123sparda/JogodoRato1.git
+    login: 
+    user: 
+    host: 
+    function: 0
+    token: 
   localConfigBranches:
-    keys:
-    - main
-    values:
-    - name: main
-      remote:
-        name: 
-        url: 
-      trackingBranch: 
-  remoteConfigBranches:
-    keys: []
-    subKeys: []
-    subKeyValues: []
-  configRemotes:
     keys: []
     values: []
+  remoteConfigBranches:
+    keys:
+    - origin
+    subKeys:
+    - Values:
+      - HEAD
+    subKeyValues:
+    - Values:
+      - name: HEAD
+        remote:
+          name: origin
+          url: https://github.com/gui123sparda/JogodoRato1.git
+        trackingBranch: 
+  configRemotes:
+    keys:
+    - origin
+    values:
+    - name: origin
+      url: https://github.com/gui123sparda/JogodoRato1.git

@@ -10,6 +10,7 @@ public class PlayerController : MonoBehaviour
     public float speed;
     public Keyboard keyboard;
     public GameObject mouseSprite;
+    
     Vector2 move;
     // Start is called before the first frame update
     void Awake()
@@ -65,6 +66,19 @@ public class PlayerController : MonoBehaviour
         move = Vector2.up;
     }
 
+    public void Punicao() {
+        Debug.Log("Punição");
+        if (move == Vector2.right) {
+            move = Vector2.left;
+        } else if (move == Vector2.up) {
+            move = Vector2.down;
+        } 
+    }
+
+    public void Reforco() {
+        Debug.Log("Reforço");
+        
+    }
     public void OnMove(InputAction.CallbackContext context)
     {
         move = context.ReadValue<Vector2>();
