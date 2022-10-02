@@ -1,0 +1,4 @@
+repository "Jogo do Rato"
+  path "/"
+    br "/main"
+    co "/main"
