@@ -10,6 +10,10 @@ public class PlayerController : MonoBehaviour
     public float speed;
     public Keyboard keyboard;
     public GameObject mouseSprite;
+    public Vector2 initPos;
+    public string posicao;
+    public AudioClip audioClip;
+    public AudioSource audio;
     
     Vector2 move;
     // Start is called before the first frame update
@@ -25,11 +29,29 @@ public class PlayerController : MonoBehaviour
     {
         UpdateSprite();
         Debug.Log(move);
+
     }
 
     private void FixedUpdate()
     {
         body.velocity = move*Mathf.Round(speed);
+        PosicaoInicial();
+    }
+
+    void PosicaoInicial() {
+        if (posicao == "Cima") {
+            initPos = Vector2.up;
+        } else if (posicao == "Baixo") {
+            initPos = Vector2.down;
+        }
+        else if (posicao == "Esquerda")
+        {
+            initPos = Vector2.left;
+        }
+        else if (posicao == "Direita")
+        {
+            initPos = Vector2.right;
+        }
     }
 
     void UpdateSprite() {
@@ -58,12 +80,25 @@ public class PlayerController : MonoBehaviour
     public void Iniciar() {
         Debug.Log("Iniciou");
         
-        move = Vector2.right;
+        move = initPos;
     }
 
     public void MoverEsquerda() {
         Debug.Log("Esquerda");
-        move = Vector2.up;
+        if (move==Vector2.up) {
+            move = Vector2.left;
+        }else if (move == Vector2.right)
+        {
+            move = Vector2.up;
+        }
+        else if (move == Vector2.left)
+        {
+            move = Vector2.down;
+        }
+        else if (move == Vector2.down)
+        {
+            move = Vector2.right;
+        }
     }
 
     public void Punicao() {
@@ -72,12 +107,30 @@ public class PlayerController : MonoBehaviour
             move = Vector2.left;
         } else if (move == Vector2.up) {
             move = Vector2.down;
-        } 
+        } else if (move==Vector2.left) {
+            move = Vector2.right;
+        }
+        else if (move == Vector2.down)
+        {
+            move = Vector2.up;
+        }
     }
 
-    public void Reforco() {
-        Debug.Log("Reforço");
+    public void ReforcoNegativo() {
+        audio.Play();
         
+        Debug.Log("Reforço");
+        for (int i=0;i<5;i++) {
+            move = new Vector2((Random.Range(-2,2)), (Random.Range(-2, 2)));
+            mouseSprite.transform.rotation = Quaternion.Euler(0,0,Random.rotation.z);
+        }
+        
+    }
+
+    public void ReforcoPositivo()
+    {
+        Debug.Log("Reforço");
+
     }
     public void OnMove(InputAction.CallbackContext context)
     {
