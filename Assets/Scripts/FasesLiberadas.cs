@@ -10,6 +10,7 @@ public class FasesLiberadas : MonoBehaviour
     public bool fase1=false;
     public bool fase2=false;
     public bool fase3=false;
+    
     public static FasesLiberadas fases;
     private void Awake()
     {

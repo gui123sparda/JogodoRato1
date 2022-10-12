@@ -12,7 +12,7 @@ public class PlayerController : MonoBehaviour
     public GameObject mouseSprite;
     public Vector2 initPos;
     public string posicao;
-    public AudioClip audioClip;
+    public AudioSource audio2;
     public AudioSource audio;
     
     Vector2 move;
@@ -103,6 +103,7 @@ public class PlayerController : MonoBehaviour
 
     public void Punicao() {
         Debug.Log("Punição");
+        audio2.Play();
         if (move == Vector2.right) {
             move = Vector2.left;
         } else if (move == Vector2.up) {

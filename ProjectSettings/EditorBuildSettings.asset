@@ -29,5 +29,14 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/ReflexoFase2.unity
     guid: f635dcfb60c024849838a8b657f2b78a
+  - enabled: 1
+    path: Assets/Scenes/ReforcoFase1.unity
+    guid: 3bc83713c7f7dea498a92082c9146221
+  - enabled: 1
+    path: Assets/Scenes/ReforcoFase2.unity
+    guid: 46f5c95f74b82a94d84d6d1e87d36245
+  - enabled: 1
+    path: Assets/Scenes/PunicaoFase1.unity
+    guid: e365c262ac8b0784aa3cb591b5d499cc
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: ab095abb0f6d86d4e82e34052901f26a, type: 2}
